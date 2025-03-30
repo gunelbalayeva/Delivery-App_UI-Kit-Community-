@@ -10,21 +10,33 @@ import UIKit
 enum CategoryItems: Codable{
     case categories(CategoriesTableViewCell.Item)
 }
-
 class CategoryViewController:UIViewController {
     
+    
+    @IBOutlet weak var categoriesNameLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     
     var categorylist:[CategoryItems] = []
-    
+    var categoryName: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        categoriesNameLabel.text = categoryName
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(CategoriesTableViewCell.nib, forCellReuseIdentifier: CategoriesTableViewCell.identifier)
          loadJSON()
         
+}
+    
+    @IBAction func dismissButton(_ sender: Any) {
+        let transition = CATransition()
+           transition.duration = 0.5
+           transition.type = .fade
+           transition.subtype = .fromLeft
+           view.window?.layer.add(transition, forKey: kCATransition)
+           self.dismiss(animated: false, completion: nil)   
     }
     func loadJSON() {
         if let url = Bundle.main.url(forResource: "Categories", withExtension: "json") {
@@ -51,15 +63,35 @@ extension CategoryViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var type = categorylist [indexPath.row]
+        let type = categorylist [indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CategoriesTableViewCell.identifier, for: indexPath)
                 as? CategoriesTableViewCell else {
             return UITableViewCell()
         }
         switch type {
         case .categories(let model) :
+            cell.delegate = self
             cell.configure(model)
+            
         }
         return cell
     }
 }
+
+extension CategoryViewController: CategoriesTableViewCellDelegate {
+    func didSelectCollectionItem(item: CategoriesCollectionViewCell.Item) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let detailVC = storyboard.instantiateViewController(withIdentifier: DataViewController.identifier) as? DataViewController {
+            detailVC.categoryName = item.name 
+            detailVC.modalPresentationStyle = .fullScreen
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = .push
+            transition.subtype = .fromRight
+            transition.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut) 
+            view.window?.layer.add(transition, forKey: kCATransition)
+            self.present(detailVC, animated: true)
+        }
+    }
+}
+

@@ -5,4 +5,9 @@
 //  Created by User on 28.03.25.
 //
 
-import Foundation
+import UIKit
+
+struct ItemDataModel :Codable {
+    var items:[ItemViewController.Item]
+    
+}

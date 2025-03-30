@@ -1,2 +1,33 @@
-#  <#Title#>
-
+{
+  "dataItems": [
+    {
+      "leftImage": "Media",
+      "title": "Boston Lettuce",
+      "subtitle": "1.10 € / piece"
+    },
+    {
+     "leftImage": "MediaPhoto",
+      "title": "Purple Cauliflower",
+      "subtitle": "3.10 € / piece"
+    },
+    {
+      "leftImage": "Media (6)",
+     "title": "Savoy Cabbage",
+      "subtitle": "4.10 € / piece"    },
+    {
+      "leftImage": "cucumber",
+      "title": "Cucumber",
+      "subtitle": "3.10 € / piece"
+    },
+    {
+      "leftImage": "Media 1",
+      "title": "Salamm",
+      "subtitle": "3.10 € / piece"
+    },
+    {
+      "leftImage": "cucumber",
+      "title": "Cucumber",
+      "subtitle": "3.10 € / piece"
+    }
+  ]
+}

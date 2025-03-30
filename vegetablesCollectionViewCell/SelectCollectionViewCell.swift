@@ -5,4 +5,17 @@
 //  Created by User on 26.03.25.
 //
 
-import Foundation
+import UIKit
+
+class SelectCollectionViewCell:UICollectionViewCell {
+      
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    struct Item: Codable{
+        var title : String
+    }
+    
+    func configure (item: Item){
+        self.titleLabel.text = item.title
+    }
+}

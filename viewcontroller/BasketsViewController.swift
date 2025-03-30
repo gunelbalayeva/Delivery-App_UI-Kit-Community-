@@ -5,4 +5,15 @@
 //  Created by User on 21.03.25.
 //
 
-import Foundation
+import UIKit
+
+class BasketsViewController:UIViewController {
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
+}

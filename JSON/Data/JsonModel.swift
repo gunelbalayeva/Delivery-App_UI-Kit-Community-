@@ -6,11 +6,9 @@
 //
 
 import UIKit
-import Foundation
 
 struct JsonModel:Codable {
     var basket: [BasketTableViewCell.Item]
     var selectItem :[SelectCollectionViewCell.Item]
     var item: [ItemCollectionViewCell.Item]
-//    var categories: [CategoriesCollectionViewCell.Item]
 }

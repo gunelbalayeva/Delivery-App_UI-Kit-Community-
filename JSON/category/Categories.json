@@ -1,2 +1,41 @@
-#  <#Title#>
-
+{
+    "categories": [
+        {
+            "items": [
+                {
+                    "image": "Media",
+                    "name": "Vegetables"
+                },
+                {
+                    "image": "fruits",
+                    "name": "Fruits"
+                }
+                
+            ]
+        },
+        {
+            "items": [
+                {
+                    "image": "sweets",
+                    "name": "Sweets"
+                },
+                {
+                    "image": "bread",
+                    "name": "Bread"
+                }
+            ]
+        },
+        {
+            "items": [
+                {
+                    "image": "coffee",
+                    "name": "Coffee"
+                },
+                {
+                    "image": "tea",
+                    "name": "Tea"
+                }
+            ]
+        },
+    ]
+}

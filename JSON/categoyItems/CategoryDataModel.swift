@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct CtegoryDataModel{
+struct CategoryDataModel:Codable{
     
     var dataItems: [DtaTableViewCell.DataItem]
 }

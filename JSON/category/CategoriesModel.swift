@@ -7,6 +7,11 @@
 
 import UIKit
 
-struct CategoriesModel:Codable {
-       var categories: [CategoriesCollectionViewCell.Item]
+struct CategoriesModel: Codable {
+    var categories: [CategoriesTableViewCell.Item]
+}
+
+struct Category: Codable {
+    let name: String
+    let items: [CategoriesCollectionViewCell.Item]
 }

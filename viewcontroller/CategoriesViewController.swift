@@ -7,9 +7,11 @@
 
 import UIKit
 
-class CategoriesViewController:UIViewController {
+class CategoriesViewController:UITabBarController {
     
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     
 }

@@ -28,7 +28,7 @@
             "change": "",
             "head": "",
             "image": "credit-card",
-            "items": "**** **** **** 4747",
+            "items": "4747  4747  4747  4747",
             "countryCityName": "",
             "adress": "",
             "rigrhButton": "",
@@ -71,8 +71,8 @@
             "head": "",
             "image": "home",
             "items": "Gunel Balayeva",
-            "countryCityName": "Baki,Azərbaycan",
-            "adress": "Cəfər Cabbarlı küçəsi",
+            "countryCityName": "Azərbaycan",
+            "adress": "Heydar Aliyev kucesi",
             "rigrhButton": "",
             "showHead": false,
             "showImage": true,
@@ -196,6 +196,18 @@
         },
         {
             "title": "Cucumbers and tomato"
+        },
+        {
+            "title": "Cabbage and letuce"
+        },
+        {
+            "title": "Cucumbers and tomato"
+        },
+        {
+            "title": "Cabbage and letuce"
+        },
+        {
+            "title": "Cucumbers and tomato"
         }
     ],
     "item": [
@@ -204,6 +216,12 @@
         },
         {
             "title": "Potatoes and onion"
+        },
+        {
+            "title": "Onions and garlic"
+        },
+        {
+            "title": "Potatoes and onion"
         }
-    ] 
+    ]
 }
